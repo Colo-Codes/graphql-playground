@@ -1,2 +1,3 @@
 # graphql-playground
-A space to practice GraphQL
+
+A space to practice GraphQL.
