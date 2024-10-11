@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import { graphqlHTTP } from "express-graphql"; // Needed for creating the GraphQL server
 import schema from "./Schemas/index.js";
@@ -9,6 +10,9 @@ import schema from "./Schemas/index.js";
 
 // 5. Set up Express Server and GraphQL Endpoint
 const app = express();
+
+// Enable CORS (to allow client queries to the API in dev environment)
+app.use(cors());
 
 // GraphQL endpoint (this is how we access our API, by going to http://localhost:4000/graphql)
 app.use(
